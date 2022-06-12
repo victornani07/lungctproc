@@ -20,6 +20,7 @@ def characteristics(xml_path):
         if unblinded_read_nodule.tag == "{http://www.nih.gov}unblindedReadNodule": 
 
           for roi in unblinded_read_nodule.getchildren():
+              
             if roi.tag == "{http://www.nih.gov}noduleID":
               nodules_id.append(roi.text)
               nodules_surfaces.append(0)
